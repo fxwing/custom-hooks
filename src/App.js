@@ -7,7 +7,8 @@ import  StateCallback  from './component/stateCallback'
 import Position from './component/position'
 // import Visible  from './component/HocProps'
 import Example  from './component/HocExtends'
-import UseReducer from './component/useReducer'
+// import UseReducer from './component/useReducer'
+import Keeplive  from './page/keepAlive/index'
 
 function App() {
   const quene = [1, 2];
@@ -65,7 +66,8 @@ function App() {
       {/* <Position></Position> */}
       {/* <Visible visible="true"></Visible> */}
       {/* <Example></Example> */}
-      <UseReducer count={10}></UseReducer>
+      {/* <UseReducer count={10}></UseReducer> */}
+      <Keeplive></Keeplive>
     </>
   );
 }

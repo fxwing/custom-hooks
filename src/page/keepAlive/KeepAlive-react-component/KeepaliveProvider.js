@@ -4,14 +4,14 @@ import cacheReducer from "./cacheReducer";
 import * as cacheTypes from "./cache-types";
 function KeepaliveProvider(props) {
   const [cacheStates, dispatch] = useReducer(cacheReducer, {});
-
+  console.log(cacheStates);
   return (
     <CacheContext.Provider value={{ cacheStates, dispatch }}>
       {props.children}
       {Object.values(cacheStates)
         .filter((cacheState) => cacheState.status !== cacheTypes.DESTROY)
         .map(({ cacheId, reactElement }) => {
-          console.log(reactElement);
+          //console.log(reactElement);
           return (
             <div
               key={cacheId}
@@ -29,7 +29,7 @@ function KeepaliveProvider(props) {
                 }
               }}
             >
-              {reactElement}
+              <div>测试</div>
               {reactElement}
             </div>
           );

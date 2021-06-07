@@ -11,7 +11,7 @@ export default function withKeepalive(
   return (props) => {
     const domRef = useRef(null);
     const { cacheStates, dispatch } = useContext(CacheContext);
-    console.log(1, cacheStates);
+    //console.log(1, cacheStates);
     // 修改scroll
     useEffect(() => {
       const cacheState = cacheStates[cacheId];

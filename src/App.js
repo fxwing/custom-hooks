@@ -1,14 +1,18 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import ReactDom from "react-dom";
 import TestEffect from "./component/testEffect";
 // import Father from "./component/refRealTime";
-import Previous  from './component/previous'
-import  StateCallback  from './component/stateCallback'
-import Position from './component/position'
+import Previous from "./component/previous";
+import StateCallback from "./component/stateCallback";
+import Position from "./component/position";
 // import Visible  from './component/HocProps'
-import Example  from './component/HocExtends'
+import Example from "./component/HocExtends";
 // import UseReducer from './component/useReducer'
-import Keeplive  from './page/keepAlive/index'
+import Keeplive from "./page/keepAlive/index";
+import { CompountComponent, ControlProps } from "./page/react-patterns";
+import NextContext from "./component/NextContext";
+import TestModel from "./component/TestModel";
 
 function App() {
   const quene = [1, 2];
@@ -19,7 +23,7 @@ function App() {
     console.log(childRef.current);
 
     let timer = setInterval(() => {
-     // forceUpdate(""); // 更新状态会进行一个浅比较
+      // forceUpdate(""); // 更新状态会进行一个浅比较
     }, 500);
     return () => {
       console.log("组件卸载了");
@@ -67,7 +71,11 @@ function App() {
       {/* <Visible visible="true"></Visible> */}
       {/* <Example></Example> */}
       {/* <UseReducer count={10}></UseReducer> */}
-      <Keeplive></Keeplive>
+      {/* <Keeplive></Keeplive> */}
+      {/* <CompountComponent></CompountComponent> */}
+      {/* <ControlProps></ControlProps> */}
+      {/* {NextContext} */}
+      <TestModel></TestModel>
     </>
   );
 }
